@@ -41,8 +41,8 @@ app.post("/artist", async (req, res) => {
     });
 
     redis.del(cacheKey);
-
     return res.json(artist);
+    
   } catch (error) {
     return res.json({ error });
   }
